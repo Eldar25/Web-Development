@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+#head1 {
+    font-weight: 100;
+    font-family: monospace;
+    margin-top: 50px;
+   
+}
+div{
+    color: #ffff22;
+}
+#header{
+ background-color:rgba(19, 18, 18, 0.87);
+padding: rgb(131,131,131);
+color: green;
+padding : 25px 75px;
+font-size: 25px;
+font-family: monospace;
+}
