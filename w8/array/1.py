@@ -1,3 +1,6 @@
-arr=[1,2,3,4,5]
-for i in range(0,len(arr)):
+n = int(input())
+arr = []
+for a in input().split():
+    arr.append( int(a) )
+for i in range(0 ,len(arr) , 2):
     print(arr[i],end=' ')
