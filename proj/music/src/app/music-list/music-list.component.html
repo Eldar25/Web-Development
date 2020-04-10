@@ -1,0 +1,27 @@
+<!----
+<div *ngFor="let music of musics index as musicId" class="musics">
+   <h1>
+        <a>
+           {{music.name}}
+           <p>History:{{music.history}}</p>
+           <p><img src="{{music.img}}" width="250" height="250"  class="image"></p>
+        </a>
+    </h1>
+</div> -->
+<div class="musics">
+   <div  *ngFor="let music of musics" >
+       <a routerLinkActive="active"routerLink="/detail/{{music.id}}" class="button">{{ music.name }}
+         <div class="history">{{music.history}}
+         </div>
+         <div class="author">{{music.author}}</div>
+         <div class="genre">{{music.ganre}}</div>
+         <div class="text">{{music.text}}</div>
+         <div class="rating">{{music.rating}}</div>
+         <img class="image" src="{{music.img}}">
+         <div class="source">{{music.sources}}</div>
+         
+       </a>
+
+   </div>
+</div>
+
