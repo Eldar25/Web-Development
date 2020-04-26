@@ -13,6 +13,8 @@ import { MusicDetailsComponent } from './music-details/music-details.component';
 import { MusicRaitComponent } from './music-rait/music-rait.component';
 import { MusicAuthorComponent } from './music-author/music-author.component';
 import { MusicGenreComponent } from './music-genre/music-genre.component';
+import { AuthorizationComponent } from './authorization/authorization.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { MusicGenreComponent } from './music-genre/music-genre.component';
     routingComponents,
     MusicRaitComponent,
     MusicAuthorComponent,
-    MusicGenreComponent
+    MusicGenreComponent,
+    AuthorizationComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { MusicGenreComponent } from './music-genre/music-genre.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

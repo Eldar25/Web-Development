@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable, of} from "rxjs";
-import {Music} from "./music";
-import {Author} from "./model/author";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable, of} from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
+import {Music} from "../music";
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class MusicService {
+export class ResumeService {
 
-  private resumeUrl = 'http://localhost:8000/music/';  // URL to web api
+  private ListUrl = 'http://localhost:8000/list/';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -20,22 +21,22 @@ export class MusicService {
   ) { }
 
   /** GET heroes from the server */
-  getMusic(): Observable<Music[]> {
-    return this.http.get<Music[]>(this.resumeUrl);
+  getResumes(): Observable<Music[]> {
+    return this.http.get<Music[]>(this.ListUrl);
   }
 
-  /* GET heroes whose name contains search term */
+  /** GET heroes whose name contains search term */
   getPinnedResumes(pin: boolean): Observable<Music[]> {
-    return this.http.get<Music[]>(`${this.resumeUrl}?pin=${pin}`);
+    return this.http.get<Music[]>(`${this.ListUrl}?pin=${pin}`);
   }
 
-  getMyResumes(AuthorId: number): Observable<Music[]> {
-    return this.http.get<Music[]>(`${this.resumeUrl}?author=${AuthorId}`);
+  getMylist(userId: number): Observable<Music[]> {
+    return this.http.get<Music[]>(`${this.ListUrl}?user=${userId}`);
   }
 
   /** GET hero by id. Will 404 if id not found */
   getOneResume(id: number): Observable<Music> {
-    const url = `${this.resumeUrl}${id}`;
+    const url = `${this.ListUrl}${id}`;
     return this.http.get<Music>(url);
   }
 
@@ -45,25 +46,24 @@ export class MusicService {
       // if not search term, return empty hero array.
       return of([]);
     }
-    return this.http.get<Music[]>(`${this.resumeUrl}?post=${term}`);
+    return this.http.get<Music[]>(`${this.ListUrl}?post=${term}`);
   }
 
   //////// Save methods //////////
 
   /** POST: add a new hero to the server */
-  addmusic(music: Music): Observable<any> {
-    return this.http.post(this.resumeUrl, music, this.httpOptions);
+  addResume(resume: Music): Observable<any> {
+    return this.http.post(this.ListUrl, resume, this.httpOptions);
   }
 
   /** DELETE: delete the hero from the server */
   deleteResume(id: number): Observable<Music> {
-    const url = `${this.resumeUrl}${id}`;
+    const url = `${this.ListUrl}${id}`;
     return this.http.delete<Music>(url, this.httpOptions);
   }
 
   /** PUT: update the hero on the server */
   updateVacancy(vacancy: Music): Observable<any> {
-    return this.http.put(this.resumeUrl, vacancy, this.httpOptions);
+    return this.http.put(this.ListUrl, vacancy, this.httpOptions);
   }
 }
-

@@ -28,10 +28,10 @@ export class MusicDetailsComponent implements OnInit {
   }
 
   getMusic():void{
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.musicService.getMusic(id)
-      .subscribe(value => this.music = value);
+    //const id = +this.route.snapshot.paramMap.get('id');
+    //this.musicService.getMusic(id)
+      //.subscribe(value => this.music = value);
   }
 
- 
+
 }

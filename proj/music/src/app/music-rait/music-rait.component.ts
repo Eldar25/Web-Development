@@ -12,7 +12,7 @@ import {Observable, of} from 'rxjs';
 })
 export class MusicRaitComponent implements OnInit {
   bestmusics = musics;
- 
+
    //musicRait= [];
 
   constructor(
@@ -21,11 +21,11 @@ export class MusicRaitComponent implements OnInit {
   //musicRait = this.musicService.getMusics();
 
   ngOnInit(): void {
-    this.musicService.getBestMusic();
+  //this.musicService.getBestMusic();
   }
   getBestMusic(){
-    const observableMusics = this.musicService.getBestMusic();
-    observableMusics.subscribe(bestmusics=> this.bestmusics=musics)
+    //const observableMusics = this.musicService.getBestMusic();
+    //observableMusics.subscribe(bestmusics=> this.bestmusics=musics)
   }
 
 }
