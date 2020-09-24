@@ -1,0 +1,120 @@
+.calc {
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 4%;
+    left: 25%;
+    position: absolute;
+    width: 400px;
+    height: 700px;
+  }
+  #smallScreenValueId{
+    font-size: 2rem;
+    height: 50px;
+    width: 397px;
+    border: none;
+    background-color: #797676;
+    color:white;
+    text-align: right;
+  }
+  
+  .main-screen{
+    top: 14%;
+    left: 25%;
+    font-size: 5rem;
+    height: 100px;
+    width: 397px;
+    border: none;
+    background-color: #797676;
+    color:white;
+    text-align: right;
+    
+  }
+  
+
+ .memory-operations {
+    
+    border: none; 
+    display: flex;
+    height: 50px;
+    width: 397px;
+    font-size: 45px;
+    padding: 0px 2px;
+    background-color: #797676;
+    color:#fff;
+  }
+.keyboard{
+    position: absolute;
+    width: 401px;
+    height: 496px;
+    font-size: 20px;
+    bottom: 0px;
+    background-color: #797676;
+    font-size: large;
+    
+ }
+ 
+ button{
+    padding: 22px 28px;
+
+    color: white;
+ }
+ 
+ 
+ button.operator{
+    padding: 31px 40px;
+    font-size: 16px;
+    background: #494747 ;
+    
+ }
+ 
+ button.number{
+    padding: 31px 45px;
+    font-size: 15px;
+    background: #000000;
+
+ }
+ button.dot{
+   padding: 31px 47px;
+   font-size: 15px;
+   background: #000000;
+
+ }
+ button.equal{
+   padding: 31px 41px;
+   font-size: 13px;
+   background: #494747 ;
+ }
+ #onedivx{
+    padding: 31px 39px;
+ }
+ #persent{
+   padding: 31px 42px;
+ }
+ #ce{
+   padding: 31px 38px;
+ }
+ #c{
+   padding: 31px 43px;
+ }
+ #sqrt{
+   padding: 31px 43px;
+ }
+ #backspace{
+   padding: 31px 37px;
+ }
+ #minus{
+   padding: 31px 42px;
+ }
+ #equal{
+   padding: 32px 41px;
+ }
+ button:hover,
+ button:active{
+   background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+              
+ }

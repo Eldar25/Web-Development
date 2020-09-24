@@ -1,0 +1,47 @@
+<div class="calc">
+    <input type="text" class="small-screen" [value]="smallScreenValue" id="smallScreenValueId" disabled />
+    <input type="text" class="main-screen" [value]="mainScreenValue" id="mainScreenValueId" disabled />
+    <div class="memory-operations">
+        <button type="button" (click) = "clearMemory()" class="memory" value="MC" disabled>MC</button>
+        <button type="button" (click) = "recallNumber()" class="memory" value="MR" disabled>MR</button>
+        <button type="button" (click) = "addInMemory()" class="memory" value="M+">M+</button>
+        <button type="button" (click) = "subtractFromMemory()" class="memory" value="M-">M-</button>
+        <button type="button" (click) = "saveNumber()" class="memory" value="MS">MS</button>
+    </div>
+    <div class="keyboard">
+        <button type="button" (click) = "Operation('%')" class="operator" id="persent" value="%">%</button>
+        <button type="button" (click) = "clearCur()" class="operator" value="clear-cur" id="ce">CE</button>
+        <button type="button" (click) = "clear()" class="operator" value="clear-all" id="c">C</button>
+        <button type="button" (click) = "backspace()" class="operator" value="backspace" id="backspace">←</button>
+
+
+        <button type="button" (click) = "Operation('1/x')" class="operator" id="onedivx" value="1/x">1/x</button>
+        <button type="button" (click) = "Operation('pow')"  class="operator" value="power" id="sqrt">x²</button>
+        <button type="button" (click) = "Operation('sqrt')" class="operator" value="sqrt">√x</button>
+        <button type="button" (click) = "Operation('/')" class="operator" value="/">&divide;</button>
+
+        <button type="button" (click) = "getNumber('7')" class="number" value="7">7</button>
+        <button type="button" (click) = "getNumber('8')" class="number" value="8">8</button>
+        <button type="button" (click) = "getNumber('9')" class="number" value="9">9</button>
+        <button type="button" (click) = "Operation('*')" class="operator" value="multiply">&times;</button>
+
+        <button type="button" (click) = "getNumber('4')" class="number" value="4">4</button>
+        <button type="button" (click) = "getNumber('5')" class="number" value="5">5</button>
+        <button type="button" (click) = "getNumber('6')" class="number" value="6">6</button>
+        <button type="button" (click) = "Operation('-')" class="operator" value="-" id="minus">-</button>
+
+
+        <button type="button" (click) = "getNumber('1')" class="number" value="1">1</button>
+        <button type="button" (click) = "getNumber('2')" class="number" value="2">2</button>
+        <button type="button" (click) = "getNumber('3')" class="number" value="3">3</button>
+        <button type="button" (click) = "Operation('+')" class="operator" value="+">+</button>
+
+        
+        
+        <button type="button" (click) = "Operation('negative')" class="number" value="negative"><span>±</span></button>   
+        <button type="button" (click) = "getNumber('0')" class="number" value="0">0</button>
+        <button type="button" (click) = "dot()" class="dot" value=".">.</button>
+        <button type="button" (click) = "Operation('=')" class="equal" value="=" id="equal">=</button>
+    </div>
+
+</div>
