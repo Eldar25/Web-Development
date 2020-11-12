@@ -1,0 +1,19 @@
+<div class="toast toast-{{toast.type}}" [style.top.px]="top + index * 100" [style.left.px]="left" *ngIf="toast.top==='top'">
+  <h4 class="toast-heading">{{toast.title}}</h4>
+  <p>{{toast.content}}</p>
+  <a class="close" (click)="delete.emit(index)">&times;</a>
+  <div class="toast__bottom" *ngIf="toast.displayDuration && toast.duration">
+    <mat-progress-bar mode="determinate" [value]="(toast.duration / initialDuration) * 100"></mat-progress-bar>
+  </div>
+</div>
+
+<div class="toast toast-{{toast.type}}" [style.top.px]="top - index * 100" [style.left.px]="left" *ngIf="toast.top==='bottom' || toast.top === 'center'">
+  <h4 class="toast-heading">{{toast.title}}</h4>
+  <p>{{toast.content}}</p>
+  <a class="close" (click)="delete.emit(index)">&times;</a>
+  <div class="toast__bottom" *ngIf="toast.displayDuration && toast.duration">
+    <mat-progress-bar mode="determinate" [value]="(toast.duration / initialDuration) * 100"></mat-progress-bar>
+  </div>
+
+</div>
+

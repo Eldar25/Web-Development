@@ -1,0 +1,2 @@
+<app-toasts-form></app-toasts-form>
+<app-toasts *ngFor="let toast of toasts; let i=index" [toast]="toast" [index]="i" [initialDuration]="toast.initialDuration" (delete)="delete($event)" [top]="top" [left]="left"></app-toasts>

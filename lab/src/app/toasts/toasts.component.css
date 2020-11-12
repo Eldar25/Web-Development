@@ -1,0 +1,40 @@
+.toast {
+  position: fixed;
+  width: 200px;
+  height: 100px;
+  border-radius: .25rem;
+  animation: move 1s;
+}
+
+.toast-success {
+  color: green;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.toast-error {
+  color: red;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.toast-heading {
+  margin-top: 10px;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
