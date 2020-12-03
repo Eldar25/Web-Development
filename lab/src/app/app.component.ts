@@ -2,11 +2,26 @@ import {Component, OnInit} from '@angular/core';
 import {ModelsService} from './shared/models.service';
 import {interval} from 'rxjs';
 import {Toast} from './shared/toast';
+import {
+  animate,
+  keyframes,
+  state,
+  style,
+  transition,
+  trigger,
+  group,
+  sequence,
+  animation,
+} from '@angular/animations';
+import { TOAST_ITEM_TRIGGER } from './toasts/toast.animation';
+import { HostBinding } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [TOAST_ITEM_TRIGGER],
 })
 export class AppComponent implements OnInit {
   title = 'angular-toasts1';
@@ -33,9 +48,15 @@ export class AppComponent implements OnInit {
       this.toasts = this.service.toasts;
     });
   }
+    //@HostBinding('@flyInOut')
+   // state: 'enter'| 'leave' = 'enter';
+
+    //leave = false;
 
   delete(index: number): void{
     this.service.deleteToast(index);
+    //this.leave = true;
+   // this.state ='leave';
   }
 
   calculate(top: string, left: string): void {
