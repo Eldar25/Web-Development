@@ -1,0 +1,13 @@
+<p>products works!</p>
+<div>
+    <li *ngFor = "let product of products">
+        <a routerLinkActive="active" routerLink ="/products/{{product.id}}" >
+            <div>{{product.name}}</div>
+        </a>
+        <div *ngIf = "logged">
+            <button  type="button" (click)="addElementToBusket(product)">добавить</button>
+        </div>
+        
+    </li>
+</div>
+<router-outlet></router-outlet>

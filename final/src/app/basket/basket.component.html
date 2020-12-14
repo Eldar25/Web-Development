@@ -1,0 +1,7 @@
+<p>basket works!</p>
+<div>
+    <li *ngFor = "let product of products ">
+        <div>{{product.name}}</div>
+        <button type="button" (click)="delete(product)">X</button>
+    </li>
+</div>

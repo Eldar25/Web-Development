@@ -1,0 +1,11 @@
+<p>product-detail works!</p>
+
+<div *ngIf = "products">
+    <mat-list>
+        <mat-list-item>{{product.name}}</mat-list-item>
+        <mat-list-item>{{product.cost}}</mat-list-item>
+        <mat-list-item>{{product.type}}</mat-list-item>
+        <img src="{{product.img}}">
+    </mat-list>
+    
+</div>
